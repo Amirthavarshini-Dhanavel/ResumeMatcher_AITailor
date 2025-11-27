@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "Job Info Extractor",
+  "version": "1.0",
+  "description": "Extracts job information from websites and stores it in a Google Spreadsheet.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "tabs",
+    "identity"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "https://accounts.google.com/"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "externally_connectable": {
+    "ids": [
+      "ohekcefjdolggkhlicjmlocpoebfmhao"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["picker.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "oauth2": {
+    "client_id": "51374964571-bi04md6l0c2ccodatpmitnitiqu67f5a.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/spreadsheets"
+    ]
+  }
+}

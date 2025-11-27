@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>The Scanner Page</title>
+  <script type="module" src="/js/scanner.js"></script>
+  <script src="/assets/vendor/mammoth.browser.js"></script>
+  <script src="/assets/vendor/pdf.worker.js"></script>
+  <script src="/assets/vendor/pdf.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/scanner.css">
+  <link rel="stylesheet" type="text/css" href="/css/small_window_scanner.css">
+  <link rel="stylesheet" type="text/css" href="/css/common.css">
+  <script src="/assets/vendor/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- fb-js -->
+  <div id="fb-root"></div>
+
+  <div class="Top">
+    <div class="logo-image"></div>
+    <a href="/html/setting.html"><img id="SettingImage" src="/images/setting_icon.png" class="Setting"></a>
+    <a href="/html/instructions.html"><img id="HowToImage" src="/images/question_mark.png" class="HowTo"></a>
+  </div>
+  <div class="scanner-text" style="margin-top:27px">
+    <span class="text_small">Find a job posting on any site like <a id="linkedinLink" style="color:#3975BB"
+    href="https://www.linkedin.com/jobs/">LinkedIn</a>, <a id="indeedLink" style="color:#3975BB"
+        href="http://www.indeed.com/">Indeed</a>, or <a id="glassdoorLink" style="color:#3975BB"
+        href="https://www.glassdoor.com/">Glassdoor</a></span>
+    <br>
+    <span class="text_small">and click the button below!</span>
+  </div>
+  <button class="button" id="scan" style="margin-top: 30px">Analyze job description</button>
+  <div class="heightless_text_container_reupload" style="margin-top:15px">
+    <span id="filename" class="text_small" style="color:#264f7f"></span>
+  </div>
+  </div>
+  <label for="reupload" id="reuploadBtn" class="text_container_reupload text_orange"
+    style="margin-top:5px; margin-bottom:15px; color:#3975BB; text-decoration: underline; font-size: 16px;">Upload New
+    Resume</label>
+  <input type="file" id="reupload" multiple size="50">
+
+  <!-- DONATE BUTTON -->
+  <div style="width: 75%; margin-left: auto; margin-right: auto; margin-bottom:15px;">
+    <div class="colorstrip" style="width: 53%; margin-top: 3px; margin-bottom: 20px;"></div>
+    <span class="text_small" style="padding-bottom: 20px;">Want a recruiter's opinion?</span>
+    <a href="https://www.jobalytics.co/expert-resume-review?utm_source=extension_scanner_page&utm_medium=app&utm_campaign=scanner_page" target="blank" class="text_small" style="display: block; color: #3975BB;">Get a Professional Resume Review</a>
+  </div>
+  <div style="width: 75%; margin-left: auto; margin-right: auto;">
+    <div class="colorstrip" style="width: 53%; margin-top: 3px; margin-bottom: 20px;"></div>
+    <span class="text_small" style="padding-bottom: 20px;">Enjoying Jobalytics?</span>
+    <a href="https://www.paypal.com/donate/?hosted_button_id=WZ4DWXTAMFABY" target="blank" class="text_small" style="display: block; color: #3975BB;">Please Donate</a>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+#filename {
+	height: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+#myFile {
+	visibility: hidden;
+	height: 0px;
+	padding: 0px;
+	margin: 0px;
+	width: 0px;
+}
+input[type=text], select {
+  width: 270px;
+  height: 27px;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #264f7f;
+}
+input[type=text]::placeholder {
+	color: #F18B53;
+	font-family: 'Avenir Semilight';
+	font-weight: 400;
+	font-style: normal;
+	text-align: center;
+	font-size: 16px;
+};
+
+input[value="Test"]{
+	display:none;
+}
+
+.dropzone-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 25px;
+}
+
+.dropzone {
+  width: 288px;
+  border: 2px dashed #3975BB !important;
+	font-size: 14px;
+	background-image: url(chrome-extension://__MSG_@@extension_id__/images/cloud-upload.png) !important;
+	background-size: 50px auto !important;
+	background-repeat: no-repeat !important;
+	background-position: 50% 31% !important;
+}
+
+.dropzone .dz-message {
+	margin: 60px 15px 10px 15px !important;
+}
+
+.browse-file {
+	text-decoration: underline;
+}
+
+.allowed-file-type {
+	font-family: 'Avenir';
+}

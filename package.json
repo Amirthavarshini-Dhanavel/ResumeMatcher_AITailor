@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix web\" \"npm run dev --prefix backend\""
+  },
+  "dependencies": {
+    "diff-match-patch": "^1.0.5"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

@@ -1,0 +1,13 @@
+input[type='checkbox'] {
+    width:12px;
+    height:12px;
+    margin-top:1px;
+    background:white;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.settings-text {
+    width: 270px;
+	margin: auto;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Info Extractor</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      overflow: hidden; 
+    }
+    h2 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #ee7625;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    button:hover {
+      background-color: #c4560b;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    }
+    button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+    input[type="text"], select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 14px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    input[type="text"]:focus, select:focus {
+      outline: none;
+      border-color: #ee7625;
+      box-shadow: 0 0 5px rgba(238, 118, 37, 0.5);
+    }
+    select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+      background-repeat: no-repeat;
+      background-position: right 10px top 50%;
+      background-size: 20px auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+      font-weight: bold;
+    }
+    #result {
+      margin-top: 20px;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    #result p {
+      margin: 5px 0;
+      word-wrap: break-word;
+    }
+    #result span {
+      font-weight: bold;
+      color: #2c3e50;
+    }
+    #sheetConfig, #columnConfig {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      margin-top: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    #resetBtn {
+      margin-top: 20px;
+      margin-bottom: 10px; /* Add some space at the bottom */
+    }
+  </style>
+</head>
+<body>
+  <h2>Job Info Extractor</h2>
+  <button id="authBtn">Authenticate with Google</button>
+  <button id="configureSheetBtn">Add Sheet ID</button>
+  <div id="sheetConfig" style="display: none;">
+    <input type="text" id="sheetId" placeholder="Enter Sheet ID">
+    <button id="submitSheetId">Submit Sheet ID</button>
+  </div>
+  <div id="columnConfig" style="display: none;">
+    <label for="sheetSelect">Choose Sheet:</label>
+    <select id="sheetSelect"></select>
+    <div>
+      <label for="jobTitleColumn">Job Title Column: <input type="text" id="jobTitleColumn" /></label>
+    </div>
+    <div>
+      <label for="companyColumn">Company Column: <input type="text" id="companyColumn" /></label>
+    </div>
+    <div>
+      <label for="urlColumn">URL Column: <input type="text" id="urlColumn" /></label>
+    </div>
+    <button id="saveConfig">Save Configuration</button>
+  </div>
+  <div id="mainInterface" style="display: none;">
+    <button id="pickTitleBtn">Pick Job Title</button>
+    <button id="pickCompanyBtn">Pick Company Name</button>
+    <button id="confirmBtn" disabled>Confirm Selection</button>
+    <div id="result">
+      <p>Job Title: <span id="jobTitle"></span></p>
+      <p>Company: <span id="company"></span></p>
+      <p>URL: <span id="url"></span></p>
+    </div>
+    <button id="moveToSheetBtn" disabled>Move to Sheet</button>
+  </div>
+  <button id="resetBtn">Reset Extension</button>
+  <script src="popup.js"></script>
+</body>
+</html>

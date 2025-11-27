@@ -1,0 +1,168 @@
+div.persistent-image {
+   white-space: normal;
+   background-color: #3a76bb;
+   border: #3a76bb 2px solid;
+   border-radius: 15px;
+   width: 450px;
+   height: 94px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   text-align: left;
+   margin: auto;
+   margin-bottom: 15px;
+   box-sizing: border-box;
+}
+#get_an {
+   font-size: 15px;
+   text-align: center;
+   font-weight: 400;
+   font-style: normal;
+   color: #434343;
+}
+#expert_resume_review {
+   font-size: 15px;
+   text-align: center;
+   font-weight: 400;
+   font-style: normal;
+   color: #3a76bb;
+   text-decoration: underline;
+}
+div.persistent-image:before {
+   content: "";
+   display: inline-block;
+   vertical-align: middle;
+   height: 100%;
+}
+
+div.heightless_text_container_percentage {
+   width: 150px;
+   text-align: center;
+   display: inline-block;
+   margin-left: 0px;
+   position: relative;
+   line-height: 0.8;
+   vertical-align: middle;
+}
+
+div.heightless_text_container_jobalytic {
+   width: 145px;
+   display: inline-block;
+   position: relative;
+   margin-left: 10px;
+   vertical-align: middle;
+}
+
+.jobalytics_text {
+   text-align: left;
+   color: #fff;
+   display: inline-block;
+   font-family: Avenir, -apple-system, system-ui, BlinkMacSystemFont, Segoe UI,
+      Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell,
+      Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+      Lucida Grande, Helvetica, Arial, sans-serif;
+   font-weight: 600;
+   font-size: 14px;
+   font-style: normal;
+}
+
+.jobalytics_text_white {
+   color: white;
+   text-decoration-color: white;
+}
+
+.jobalytics_text_big {
+   font-family: Avenir, -apple-system, system-ui, BlinkMacSystemFont, Segoe UI,
+      Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell,
+      Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+      Lucida Grande, Helvetica, Arial, sans-serif;
+   font-size: 45px;
+   margin-top: 10px;
+   text-align: center;
+}
+
+.jobalytics_text_keyword {
+   text-align: center;
+   margin-top: 3px;
+   color: #fff;
+   display: inline-block;
+   font-family: Avenir, -apple-system, system-ui, BlinkMacSystemFont, Segoe UI,
+      Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell,
+      Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+      Lucida Grande, Helvetica, Arial, sans-serif;
+   font-weight: 600;
+   font-size: 14px;
+   font-style: normal;
+}
+
+.lightning-image {
+   background-image: url(chrome-extension://__MSG_@@extension_id__/images/lightning.png);
+   background-size: contain;
+   background-position: center;
+   background-repeat: no-repeat;
+   text-align: center;
+   width: 85px;
+   height: 85px;
+   display: block;
+   float: right;
+   margin-right: 24px;
+}
+
+div.where_is_extension_img {
+   background-image: url(chrome-extension://__MSG_@@extension_id__/images/where_is_extension.png);
+   width: 150px;
+   height: 150px;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   text-align: center;
+}
+
+/* Tooltip container */
+.jobalytics_tooltip {
+   position: relative;
+   display: inline-block;
+}
+
+/* Tooltip text */
+.jobalytics_tooltip .jobalytics_tooltiptext {
+   visibility: hidden;
+   width: 200px;
+   background-color: #fff;
+   border: 3px solid #3a76bb;
+   color: black;
+   text-align: center;
+   padding: 5px;
+   padding-top: 10px;
+   border-radius: 6px;
+   position: absolute;
+   z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.jobalytics_tooltip:hover .jobalytics_tooltiptext {
+   visibility: visible;
+   line-height: 1.2;
+}
+
+#match_score {
+   color: #fff;
+   line-height: 0.8;
+   font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto,
+      Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell,
+      Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+      Lucida Grande, Helvetica, Arial, sans-serif !important;
+}
+
+#what_is_missing_container,
+#find_missing_keyword_container,
+#resume_match_score_container {
+   color: #fff;
+   font-size: 14px;
+}
+
+#resume_match_score_container,
+#match_score_container,
+#resume_match_container {
+   line-height: 0.8;
+}

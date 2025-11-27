@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/css/big_window.css">
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/instructions.css">
+    <script src="/assets/vendor/jquery.min.js"></script>
+    <script type="module" src="/js/instructions.js"></script>
+  </head>
+  <body>
+  	<div class="Top" >
+	  <div class="logo-image"></div>
+      <a href="/html/setting.html"><img id="SettingImage" src="/images/setting_icon.png" class="Setting"></a>
+      <a href="/html/instructions.html"><img id="HowToImage" src="/images/question_mark.png" class="HowTo"></a>
+    </div>
+  	<div class="container" style="margin-top:27px">
+  		<div class="text_container text_big" style="width:75%">
+			<div id="caption" style="margin-bottom:14px"></div>
+
+			<!-- Full-width images with number text -->
+			<div class="mySlides">
+				<img src="/images/instructions/linkedin_1_look_for_job.gif" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<img src="/images/instructions/linkedin_2_pick_a_job.gif" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<img src="/images/instructions/linkedin_3_scan_job.gif" style="width:100%">
+			</div>
+		</div>
+
+	  <!-- Progress dots -->
+	  <div class="row" style="margin-top:14px">
+	    <div class="dot">
+	    	<span style="display:none">1. Search a job <b class="text_orange">anywhere</b> online.</span>
+	    </div>
+	    <div class="dot">
+			<span style="display:none">2. Go to the <b class="text_orange">job description</b>.</span>
+	    </div>
+	    <div class="dot">
+	    	<span style="display:none">3. <b class="text_orange">Analyze</b> the job with Jobalytics.</span>
+	  </div>
+
+	  <a class="prev" style="position:absolute;top:50%;left:0px">&#10094;</a>
+	  <a class="next" style="position:absolute;top:50%;right:0px">&#10095;</a>
+	</div>
+
+	<button id="got_it" class="button" style="margin-top:14px;">Got It</button>
+  </body>
+</html>

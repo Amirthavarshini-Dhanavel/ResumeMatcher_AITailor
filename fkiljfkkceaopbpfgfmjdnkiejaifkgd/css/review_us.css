@@ -1,0 +1,23 @@
+.text {
+	text-align: center;
+	display: inline;
+	font-family: 'Avenir Semilight';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 17px;
+}
+
+.text:after {
+  content: '\A';
+  white-space: pre;
+}
+
+.clickable_text {
+  color: #F18B53;
+  text-decoration-color:#F18B53;
+  text-decoration:underline;
+}
+
+.clickable_text:hover {
+  cursor: pointer;
+}

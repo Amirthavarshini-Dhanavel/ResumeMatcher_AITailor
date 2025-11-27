@@ -1,0 +1,29 @@
+#reupload {
+	visibility: hidden;
+	height: 0px;
+	padding: 0px;
+	margin: 0px;
+	width: 0px;
+}
+
+.heightless_text_container_reupload {
+	display: inline-block;
+	overflow: auto;
+	width: 270px;
+	height: auto;
+	text-align: center;
+}
+
+.text_container_reupload {
+	margin: auto;
+	overflow: auto;
+	display: inline-block;
+	width: 270px;
+	height: auto;
+	cursor: pointer;	
+}
+
+.scanner-text {
+	width: 270px;
+	margin: auto;
+}

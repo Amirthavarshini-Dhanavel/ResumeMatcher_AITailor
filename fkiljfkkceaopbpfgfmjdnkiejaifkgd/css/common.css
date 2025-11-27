@@ -1,0 +1,195 @@
+@font-face {
+  font-family: Avenir;
+  src: url(chrome-extension://__MSG_@@extension_id__/fonts/AvenirLTStd-Medium.otf);
+}
+
+@font-face {
+  font-family: Avenir Light;
+  src: url(chrome-extension://__MSG_@@extension_id__/fonts/AvenirLTStd-Book.otf);
+}
+
+@font-face {
+  font-family: Avenir Semilight;
+  src: url(chrome-extension://__MSG_@@extension_id__/fonts/AvenirLTStd-Roman.otf);
+}
+
+div.logo-image {
+	background-image: url(chrome-extension://__MSG_@@extension_id__/images/logo_image.png);
+	background-color: #fff;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: left;
+	margin: auto;
+	width: 230px;
+	height: 55px;
+	margin-top:27px;
+}
+
+.button {
+	width: 270px;
+	height: 35px;
+	display: block;
+	margin: auto;
+	border: none;
+	cursor: pointer;
+	border-radius: 30px;
+	outline: none;
+	box-sizing: border-box;
+	background: #3975BB;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	text-align: center;
+	font-family: 'Avenir';
+	font-weight: 400;
+	font-style: normal;
+}
+
+.button:hover {
+	background: #264f7f;
+}
+
+.text_container {
+	margin: auto;
+	overflow: auto;
+	width: 270px;
+	height: auto;
+}
+
+.heightless_text_container {
+	position: absolute;
+	left: 67.5px;
+	margin: auto;
+	overflow: auto;
+	width: 270px;
+	height: auto;
+}
+
+.text_title {
+	text-align: center;
+	margin: 0px;
+	font-family: 'Avenir';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 41px;
+}
+
+.text_tiny {
+  font-size: 13px;
+  text-align: center;
+  font-family: 'Avenir Semilight';
+  font-weight: 400;
+  font-style: normal;
+  color: #434343;
+}
+
+.text_smaller {
+  font-size: 15px;
+  text-align: center;
+  font-family: 'Avenir Semilight';
+  font-weight: 400;
+  font-style: normal;
+  color: #434343;
+}
+
+.text_small {
+	font-size: 16px;
+	text-align: center;
+	font-family: 'Avenir Semilight';
+	font-weight: 400;
+	font-style: normal;
+	color: #434343;
+}
+
+.text_bigish {
+	font-size: 17px;
+	text-align: center;
+	font-family: 'Avenir Semilight';
+	font-weight: 400;
+	font-style: normal;
+	color: #434343;
+}
+
+.text_big {
+	font-size: 18px;
+	text-align: center;
+	font-family: 'Avenir Semilight';
+	font-weight: 400;
+	font-style: normal;
+	color: #434343;
+}
+
+.text_white {
+	color: white;
+}
+
+.text_orange {
+	color: #F18B53;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #F18B53;
+  border-color: #F18B53 transparent #F18B53 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.Setting {
+    position: absolute;
+    top: 27px;
+    right: 27px;
+}
+
+.HowTo {
+	position: absolute;
+	top: 27px;
+	right: 54px;
+}
+
+#SettingImage {
+    width: 25px;
+    height: auto;
+}
+
+#HowToImage {
+	width: 25px;
+	height: 25px;
+	margin-right: 3px;
+}
+
+.colorstrip {
+    width: 40%;
+    height: 1px;
+    border-color: #3975BB;
+    background-color: #3975BB;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+a:hover {
+	cursor: pointer;
+}

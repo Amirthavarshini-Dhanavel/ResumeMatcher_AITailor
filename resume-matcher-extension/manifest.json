@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Resume Matcher Orchestrator",
+  "version": "0.1.0",
+  "action": { "default_popup": "popup.html" },
+  "options_page": "options.html",
+  "permissions": ["storage", "tabs", "scripting"],
+  "host_permissions": [
+    "http://localhost:5173/*",
+    "https://*.linkedin.com/*",
+    "https://*.indeed.com/*",
+    "https://*.glassdoor.com/*",
+    "https://*.workday.com/*",
+    "https://*.lever.co/*"
+  ],
+  "background": { "service_worker": "background.js" }
+}
+
+

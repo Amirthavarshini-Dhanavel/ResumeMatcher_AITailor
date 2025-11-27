@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>The Uploader Page</title>
+      <script src="/assets/vendor/mammoth.browser.js"></script>
+      <script src="/assets/vendor/pdf.worker.js"></script>
+      <script src="/assets/vendor/pdf.min.js"></script>
+      <script src="/assets/vendor/dropzone/dist/dropzone.js"></script>
+      <script type="module" src="/js/full_page_uploader.js"></script>
+      <script src="/assets/vendor/jquery.min.js"></script>
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="/css/full_page_uploader.css"
+      />
+      <link rel="stylesheet" type="text/css" href="/css/small_window.css" />
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="/assets/vendor/dropzone/dist/dropzone.css"
+      />
+      <link rel="stylesheet" type="text/css" href="/css/common.css" />
+   </head>
+   <body>
+      <div class="logo-image"></div>
+
+      <div class="text_big" style="margin-top: 27px">
+         Upload your resume to get started
+      </div>
+
+      <div class="dropzone-container">
+         <form
+            action="/upload-target"
+            class="dropzone"
+            id="resume-upload-dropzone"
+         ></form>
+      </div>
+
+      <div style="margin-bottom: 25px">
+         <span class="text_tiny"
+            >By uploading your resume, you agree to our<br /><a
+               href="#"
+               id="privacy_policy"
+               style="color: #3975bb; margin-top: 5px; display: block"
+               >Privacy Policy</a
+            ></span
+         >
+      </div>
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="/dist/firebase-bundle.js"></script>
+      <!-- <script src="/assets/firebase-firestore.js"></script>
+      <script src="/assets/firebase-storage.js"></script> -->
+   </body>
+</html>

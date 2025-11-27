@@ -1,0 +1,12 @@
+body {
+	font-family: 'Avenir Semilight';
+	font-weight: 400;
+	font-style: normal;
+	width: 405px;
+	height: 350px;
+	max-height: 350px;
+	padding: 0PX;
+	margin: 0px;
+	text-align: center;
+	background-color: #297296;
+}

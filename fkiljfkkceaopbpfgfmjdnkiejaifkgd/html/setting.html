@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Setting Page</title>
+      <script type="module" src="/js/setting.js"></script>
+      <link rel="stylesheet" type="text/css" href="/css/small_window.css" />
+      <link rel="stylesheet" type="text/css" href="/css/common.css" />
+      <link rel="stylesheet" type="text/css" href="/css/setting.css" />
+      <script src="/assets/vendor/jquery.min.js"></script>
+   </head>
+   <body>
+      <div class="logo">
+         <div class="logo-image"></div>
+      </div>
+      <div class="settings-text" style="margin-top: 10px">
+         <span class="text_small">Settings</span>
+         <div style="margin-top: 5px"></div>
+         <p
+            id="settings_checkboxes"
+            class="text_small"
+            style="display: none; margin-top: 10px"
+         >
+            <input type="checkbox" id="input_checkbox" />
+            Automatically show Jobalytics score on certain job sites like
+            LinkedIn
+         </p>
+         <div class="lds-dual-ring" id="loading"></div>
+      </div>
+      <a href="/html/popup.html" style="text-decoration: none">
+         <button class="button" id="setting" style="margin-bottom: 25px">
+            Done
+         </button>
+      </a>
+   </body>
+</html>

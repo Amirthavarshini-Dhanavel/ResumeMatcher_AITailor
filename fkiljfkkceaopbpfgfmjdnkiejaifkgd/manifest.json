@@ -1,0 +1,70 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 3,
+  "name": "Jobalytics - Resume Keyword Analyzer",
+  "description": "Analyze job descriptions and identify keywords missing from your resume.",
+  "version": "6.4.7",
+  "action": {
+    "default_icon": "icon.png",
+    "default_popup": "/html/popup.html"
+  },
+  "background": {
+    "service_worker": "/js/background.js",
+    "type": "module"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "/keywords/synonyms_list.js",
+        "/keywords/general_keywords.js",
+        "/keywords/pm.js",
+        "/keywords/swe.js",
+        "/keywords/swe_essentials.js",
+        "/keywords/swe_nice_to_haves.js",
+        "/keywords/marketing.js",
+        "/keywords/pm_marketing.js",
+        "/js/util.js",
+        "/html/persistent_score.html",
+        "/css/persistent_score.css",
+        "/css/small_window.css",
+        "/css/common.css",
+        "/images/persistentscorebackground.png",
+        "/images/where_is_extension.png",
+        "/images/lightning.png",
+        "/images/no-email-found-cube.png",
+        "assets/*.js"
+      ],
+      "matches": [
+        "*://*/*"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*",
+    "https://www.google-analytics.com/*"
+  ],
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "webNavigation",
+    "webRequest",
+    "scripting"
+  ],
+  "externally_connectable": {
+    "ids": [
+      "ohekcefjdolggkhlicjmlocpoebfmhao"
+    ]
+  },
+  "icons": {
+    "32": "icon.png",
+    "16": "icon.png",
+    "128": "icon.png",
+    "24": "icon.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

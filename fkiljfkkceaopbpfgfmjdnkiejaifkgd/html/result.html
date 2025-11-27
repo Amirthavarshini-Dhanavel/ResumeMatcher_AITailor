@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Jobalytics</title>
+  
+  <script src="/assets/vendor/mammoth.browser.js"></script>
+  <script src="/assets/vendor/pdf.worker.js"></script>
+  <script src="/assets/vendor/pdf.min.js"></script>
+  <script type="module" src="/js/result.js"></script>
+  <script type="module" src="/js/parser.js"></script>
+  <script src="/assets/vendor/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/css/big_window.css">
+  <link rel="stylesheet" type="text/css" href="/css/common.css">
+  <link rel="stylesheet" type="text/css" href="/css/result.css">
+</head>
+
+<body>
+  <div class="top_content">
+    <div class="Top">
+      <div class="logo-image"></div>
+      <a href="/html/setting.html"><img id="SettingImage" src="/images/setting_icon.png" class="Setting"></a>
+      <a href="/html/instructions.html"><img id="HowToImage" src="/images/question_mark.png" class="HowTo"></a>
+    </div>
+    <button id="scan_again" class="button text_big text_orange" style="margin-top:27px; display: none;">Scan
+      again</button>
+    <div class="text_container" style="margin-top:24px; margin-bottom:24px; overflow: inherit;">
+      <div id="score-container" class="text_title">
+        <span id="score" class="text_title">0</span>
+      </div>
+      <span class="text_title" style="color: #3975BB; font-size: 32px;">%</span>
+      <p class="text_small" style="margin-top: 11px; margin-bottom: 0px; color: #3975BB; font-family: 'Avenir';">Resume
+        Match</p>
+    </div>
+    <label for="reupload" id="reuploadBtn" class="button"
+      style="margin-top:13.5px; margin-bottom: 15px; width: 250px;">Upload new resume</label>
+      <a href="https://buy.stripe.com/eVq00j2X321o4IvdFC6Vq10" style="color:#3975BB;" target="_blank" class="text_small">Get Expert Resume Review</a>
+    
+  </div>
+  
+  <!-- 01.05.20 Marked by Jacky - Move the feedback section -->
+  <div class="bottom-parent">
+    <div class="bottom_content">
+      <div id="job_rec_box" class="job-rec-ad-box" style="display:none;">
+        <div class="text_big">Another job that's highly recommended for you:</div>
+        <br />
+        <div class="job-rec-ad-container">
+          <div class="job-rec-ad">
+            <a id="job_rec_link" href="put-the-ad-link-here-plz" target="blank" class="text_bigish"
+              style="color: #3975BB;">Ad Job Title</a>
+            <div id="job_rec_company" class="text_smaller">Ad Job Company</div>
+            <div id="job_rec_loc" class="text_smaller">Ad Job Location</div>
+          </div>
+          <div class="job-rec-ad-match-score-container">
+            <div id="job_rec_score" class="job-rec-ad-match-score">90</div>
+            <div style="font-size: 16px;">%</div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:15px"></div>
+      <span id="keyword_match" class="text_big result_row">
+        Keyword matches:<br>
+      </span>
+      <span id="match_keyword"></span>
+      <a href="#" id="match_show_more" class="text_big result_row" style="color:#3975BB; margin-left: 145px;"></a>
+      <div style="margin-top:19px"></div>
+      <span id="keyword_dontmatch" class="text_big result_row">
+        What's missing:<br>
+      </span>
+      <span id="unmatch_keyword"></span>
+      <a href="#" id="unmatch_show_more" class="text_big result_row" style="color:#3975BB; margin-left: 145px;"></a>
+
+      <!-- DONATE BUTTON -->
+      <div style="width: 75%; margin: 0 auto 30px;">
+        <div class="colorstrip" style="width: 53%; margin-bottom: 20px;"></div>
+        <span class="text_small" style="padding-bottom: 20px;">Enjoying Jobalytics?</span>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=WZ4DWXTAMFABY" target="blank" class="text_small" style="color: #3975BB; font-weight:bold;">
+          <label class="button" style="margin-top:13.5px; margin-bottom: 15px; width: 250px;">Please donate</label>
+        </a>
+      </div>
+
+      <!-- RESUME AFFIALIATE BUTTON -->
+      <!-- <div style="width: 75%; margin-left: auto; margin-right: auto;">
+        <div class="colorstrip" style="width: 53%; margin-bottom: 20px;"></div>
+        <span class="text_small" style="padding-bottom: 20px;">Need additional help writing your resume?</span>
+        <a href="https://jobalytics.co/post/resume-writing-services-to-help-you-get-a-job" target="blank" class="text_small"
+          style="color: #3975BB; font-weight:bold;">Click here</a>
+      </div> -->
+
+      <div style="width: 75%; margin:auto;">
+        <div class="colorstrip"></div>
+
+        <!-- SOCIAL SHARE BUTTONS  -->
+        <p class="text_small">Share Jobalytics with your friends looking for new jobs!</p>
+        <div class="share-buttons">
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fjobalytics-resume-keyword%2Ffkiljfkkceaopbpfgfmjdnkiejaifkgd%3Futm_medium%3Dextension%26utm_source%3Dlinkedin_share"
+            target="_blank" rel="nofollow" title="Share on LinkedIn">
+            <div class="share-button-sm linkedin-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+          </a>
+          <a target="_blank"
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fjobalytics-resume-keyword%2Ffkiljfkkceaopbpfgfmjdnkiejaifkgd%3Futm_medium%3Dextension%26utm_source%3Dfacebook_share&amp;src=sdkpreparse"
+            class="fb-xfbml-parse-ignore" title="Share on Facebook">
+            <div class="share-button-sm facebook-icon">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+          </a>
+          <a href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fjobalytics-resume-keyword%2Ffkiljfkkceaopbpfgfmjdnkiejaifkgd%3Futm_medium%3Dextension%26utm_source%3Dtwitter_share&text=Use+Jobalytics+Keyword+Analyzer+to+optimize+your+resume"
+            target="_blank" title="Tweet">
+            <div class="share-button-sm twitter-icon">
+              <i class="fab fa-twitter"></i>
+            </div>
+          </a>
+          <a href="mailto:?subject=Check out Jobalytics!&amp;body=Check out this handy tool to help with your job search! https://chrome.google.com/webstore/detail/jobalytics-resume-keyword/fkiljfkkceaopbpfgfmjdnkiejaifkgd?utm_medium=email&utm_source=extension_share"
+            title="Share by Email">
+            <div class="share-button-sm email-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+          </a>
+          <a title="Copy Link" href="#">
+            <div class="share-button-sm copy-icon" id="copyIcon">
+              <i class="far fa-copy"></i><span id="tooltipText">Copied!</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- FEEDBACK BUTTON -->
+        <div id="feedbackDiv" style="display:none; margin-bottom: 20px;">
+          <div class="colorstrip"></div>
+          <span class="text_small">Enjoying Jobalytics so far?</span>
+          <div class="rating" style="font-size:22px">
+            <span id="5_star">&#9734</span>
+            <span id="4_star">&#9734</span>
+            <span id="3_star">&#9734</span>
+            <span id="2_star">&#9734</span>
+            <span id="1_star">&#9734</span>
+          </div>
+          <span id="not_now" class="text_small text_orange clickable_text" style="font-size:14px;">Not Now</span>
+        </div>
+
+        <!-- BUG SUBMISSION BUTTON -->
+        <div id="bug_submission" style="margin-bottom: 30px;">
+          <div class="colorstrip"></div>
+          <p class="text_small" style="margin-bottom: 0px;">Found any bugs?</p>
+          <a href="https://www.jobalytics.co/bug-submissions" target="_blank" class="text_small">Submit them here, please</a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <input type="file" id="reupload" multiple size="50" >
+</body>
+
+</html>
